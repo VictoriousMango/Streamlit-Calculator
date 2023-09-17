@@ -52,8 +52,6 @@ def equals():
         st.session_state['expression'] = str(eval(st.session_state['expression']))
     except SyntaxError:
         st.session_state['expression'] = 'Invalid Expression, press clear to continue'
-    except ZeroDivisionError:
-        st.session_state['expression'] = 'Zero Division Error, press clear to continue'
 
 calculate = 'Enter Expression' if st.session_state['expression'] == '' else st.session_state['expression']
 col1.header(calculate)
